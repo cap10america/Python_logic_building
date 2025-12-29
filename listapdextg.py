@@ -124,27 +124,27 @@ import tracemalloc
 
 
 
-def read_write(input_file , output_file):
-    with open (input_file , 'rb') as infile , open(output_file , 'wb+') as outfile :
-        content = infile.read()
-        outfile.write(content)
-        outfile.seek(0)
-        print("File copied successfully.")
-        data = outfile.read()
-        print(str(data))
-        # print(data.decode('latin-1'))
-        def view_readable_strings(binary_data):
-    # Keep only characters that are printable (letters, numbers, punctuation)
-            clean_text = ""
-            for byte in binary_data:
-                # Check if byte corresponds to a printable ASCII character
-                if 32 <= byte <= 126 or byte == 10: # 10 is Newline
-                    clean_text += chr(byte)
-                else:
-                    # Replace unreadable binary junk with a dot
-                    clean_text += " "
+# def read_write(input_file , output_file):
+#     with open (input_file , 'rb') as infile , open(output_file , 'wb+') as outfile :
+#         content = infile.read()
+#         outfile.write(content)
+#         outfile.seek(0)
+#         print("File copied successfully.")
+#         data = outfile.read()
+#         print(str(data))
+#         # print(data.decode('latin-1'))
+#         def view_readable_strings(binary_data):
+#     # Keep only characters that are printable (letters, numbers, punctuation)
+#             clean_text = ""
+#             for byte in binary_data:
+#                 # Check if byte corresponds to a printable ASCII character
+#                 if 32 <= byte <= 126 or byte == 10: # 10 is Newline
+#                     clean_text += chr(byte)
+#                 else:
+#                     # Replace unreadable binary junk with a dot
+#                     clean_text += " "
                     
-            print(clean_text)
-        view_readable_strings(data)
-read_write('Ameen_Shaik_SDE1.pdf' , 'copy_fib.py')
+#             print(clean_text)
+#         view_readable_strings(data)
+# read_write('Ameen_Shaik_SDE1.pdf' , 'copy_fib.py')
 
